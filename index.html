@@ -1,141 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandeep Coder</title>
-  <style>
-    /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0f172a;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.menu-icon {
-  font-size: 1.8rem;
-  cursor: pointer;
-  display: none;
-}
-
-/* Side Menu */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100vh;
-  background: #1e293b;
-  color: white;
-  padding: 30px 20px;
-  transition: left 0.4s ease;
-  z-index: 1000;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
-}
-
-.side-menu.active {
-  left: 0;
-  animation: slideIn 0.4s ease forwards;
-}
-
-@keyframes slideIn {
-  from {
-    left: -250px;
-    opacity: 0;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-.close-btn {
-  font-size: 1.5rem;
-  text-align: right;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #38bdf8;
-  padding-left: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-}
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandeep</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 </head>
-
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sandeep Coder</div>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-btn">Home</a></li>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Sandeep Coder</div>
-    <div class="menu-icon" onclick="openMenu()">☰</div>
-  </nav>
-
-  <!-- Side Menu -->
-  <div class="side-menu" id="sideMenu">
-    <div class="close-btn" onclick="closeMenu()">✖</div>
-    <ul class="nav-links">
-      <li><a href="#home" onclick="closeMenu()">Home</a></li>
-      <li><a href="#about" onclick="closeMenu()">About</a></li>
-      <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-      <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-    </ul>
+        <li><a href="#about" class="nav-btn">About</a></li>
+        <li><a href="#skills" class="nav-btn">Skills</a></li>
+        <li><a href="#projects" class="nav-btn">Projects</a></li>
+        <li><a href="#contact" class="nav-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <section class="hero">
+    <div class="left">
+      <h1>Hi, I'm <span>Sandeep</span></h1>
+      <p id="typed-text"></p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Download CV</button>
+        <button class="btn btn-outline">Contact Me</button>
+      </div>
+    </div>
+    <div class="right">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Developer Image">
+    </div>
+  </section>
+  <section id="about" class="about-section">
+  <div class="container">
+    <div class="about-left">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sandeep Profile">
+    </div>
+    <div class="about-right">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm <strong>Sandeep</strong>, a passionate Full Stack Developer who loves creating 
+        modern, fast, and responsive web applications. I focus on building user-friendly 
+        experiences with clean, efficient code and attention to detail.
+      </p>
+      <p>
+        Skilled in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>Node.js</span>, 
+        <span>React</span>, and <span>Databases</span>.
+      </p>
+      <a href="#projects" class="btn-primary">View My Work</a>
+    </div>
   </div>
+</section>
 
-  <script>
-    function openMenu() {
-      document.getElementById('sideMenu').classList.add('active');
-    }
+</main>
+  <footer>
+    <!--Tab to edit-->
+  </footer>
 
-    function closeMenu() {
-      document.getElementById('sideMenu').classList.remove('active');
-    }
-  </script>
-
+<script src="script.js">sl</script>
 </body>
 </html>
