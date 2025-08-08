@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sandeep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandeep | Full Stack Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Sandeep - Full Stack Developer skilled in Frontend, Backend, and Video Editing.">
+  <meta name="keywords" content="Sandeep, Full Stack Developer, Frontend, Backend, Web Developer, Portfolio">
+  <meta name="author" content="Sandeep">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sandeep | Full Stack Developer">
+  <meta property="og:description" content="Portfolio of Sandeep - Frontend, Backend, Video Editing">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="bg.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 </head>
 <body>
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
       <div class="logo">Sandeep Coder</div>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="menu-toggle" aria-label="Menu Toggle">
+        <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="#about" class="nav-btn">Home</a></li>
-
+        <li><a href="#home" class="nav-btn">Home</a></li>
         <li><a href="#about" class="nav-btn">About</a></li>
         <li><a href="#skills" class="nav-btn">Skills</a></li>
         <li><a href="#projects" class="nav-btn">Projects</a></li>
@@ -27,11 +45,35 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
+  <main>
+    <section id="home" class="firstsection">
+      <div class="left">
+        <h1>Hi, My Name Is <span class="purple">Sandeep</span></h1>
+        <h2>I am a <span id="element"></span></h2>
+      </div>
+      <div class="right">
+        <img src="bg.png" alt="Sandeep Portfolio Image">
+      </div>
+    </section>
 
+
+  </main>
+
+  <!-- Footer -->
   <footer>
-    <!--Tab to edit-->
+    <
   </footer>
 
-<script src="script.js">sl</script>
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script>
+    new Typed("#element", {
+      strings: ['Frontend Developer', 'Backend Developer', 'Video Editor'],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
 </body>
 </html>
